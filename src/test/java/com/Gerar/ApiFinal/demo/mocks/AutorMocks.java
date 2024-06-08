@@ -6,7 +6,7 @@ public class AutorMocks {
         Autor autor = new Autor();
         autor.setId(1L);
         autor.setPersona(PersonaMock.mockEntity());
-        autor.setMaterias(LibroMock.mockList());
+        autor.setLibros(LibroMock.mockList());
         return autor;
     }
 }
