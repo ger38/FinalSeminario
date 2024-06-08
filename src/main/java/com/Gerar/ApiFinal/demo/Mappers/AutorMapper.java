@@ -1,16 +1,15 @@
 package com.Gerar.ApiFinal.demo.Mappers;
 
+import com.Gerar.ApiFinal.demo.Dtos.AutorRequest;
+import com.Gerar.ApiFinal.demo.Dtos.AutorResponse;
+import com.Gerar.ApiFinal.demo.Dtos.LibroRequest;
+import com.Gerar.ApiFinal.demo.Dtos.PersonaResponse;
+import com.Gerar.ApiFinal.demo.Model.Autor;
+import com.Gerar.ApiFinal.demo.Model.Libro;
+import com.Gerar.ApiFinal.demo.Model.Persona;
+import com.Gerar.ApiFinal.demo.Services.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.Gerar.ApiFinal.demo.Dtos.*;
-import com.Gerar.ApiFinal.demo.Services.*;
-//import com.Gerar.ApiFinal.demo.Dtos.AutorRequest;
-//import com.Gerar.ApiFinal.demo.Dtos.PersonasResponse;
-//import com.Gerar.ApiFinal.demo.Dtos.AutorResponse;
-//import com.Gerar.ApiFinal.demo.Model.Persona;
-import com.Gerar.ApiFinal.demo.Model.*;
-//import com.Gerar.ApiFinal.demo.Model.Libro;
-import lombok.Builder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +24,7 @@ public class AutorMapper {
         List<Libro> libroList = new ArrayList<>();
         for (LibroRequest libroRequest : autorRequest.getLibros()) {
 
-            Libro libro = Libro.Build()
+            Libro libro = Libro.builder()
                     .nombre(libroRequest.getNombre())
                     .anio(libroRequest.getAnio())
                     .build();
