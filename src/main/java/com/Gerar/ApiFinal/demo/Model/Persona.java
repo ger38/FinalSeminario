@@ -1,8 +1,9 @@
 package com.Gerar.ApiFinal.demo.Model;
 
-import jakarta.persistence.*;
 import lombok.Builder;
 import lombok.Getter;
+
+import javax.persistence.*;
 
 @Table(name = "persona")
 @Entity

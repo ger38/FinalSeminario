@@ -20,7 +20,7 @@ public class LibroService {
     }
 
     public Libro save (Libro libro) {
-        return libroRepository.save(libro);
+        return (Libro) libroRepository.save(libro);
     }
 
     public Libro setLibroNuevaOExistente(LibroRequest libroRequest, Libro libro) {
